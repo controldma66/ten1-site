@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ТЕНЬ VPN — Интернет под цензурой. Ты — в тени.</title>
+  <meta name="description" content="Приватный VPN нового поколения на протоколе XRAY VLESS + REALITY. Обход любых блокировок, скорость до 10 Гбит/с. 5 дней бесплатно.">
+  <link rel="icon" type="image/png" href="assets/mascot.png">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            stealth: {
+              bg: '#080a0f',
+              card: '#0e121a',
+              cardBorder: '#1c2433',
+              accent: '#00f2fe',
+              accentGlow: 'rgba(0, 242, 254, 0.15)',
+              accentDim: '#4facfe',
+              textMuted: '#8b9bb4',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #080a0f;
+      color: #f1f5f9;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 242, 254, 0.12) 0%, transparent 60%),
+        radial-gradient(circle at 10% 40%, rgba(79, 172, 254, 0.06) 0%, transparent 50%);
+    }
+    .neon-border {
+      border: 1px solid rgba(0, 242, 254, 0.25);
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.1);
+    }
+    .neon-btn {
+      background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
+      transition: all 0.3s ease;
+    }
+    .neon-btn:hover {
+      box-shadow: 0 0 35px rgba(0, 242, 254, 0.7);
+      transform: translateY(-2px);
+    }
+    .glass-panel {
+      background: rgba(14, 18, 26, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-cyan-500 selection:text-black">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-stealth-cardBorder/50">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-3">
+        <img src="assets/mascot.png" alt="Тень VPN" class="w-8 h-8 rounded-lg shadow-md border border-cyan-500/30">
+        <span class="font-black text-xl tracking-wider text-white">ТЕНЬ VPN</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stealth-textMuted">
+        <a href="#features" class="hover:text-white transition">Преимущества</a>
+        <a href="#how" class="hover:text-white transition">Как подключить</a>
+        <a href="#pricing" class="hover:text-white transition">Тарифы</a>
+      </nav>
+      <a href="https://t.me/Ten1vpn_bot?start=site" target="_blank" class="neon-btn text-black font-bold text-xs uppercase px-4 py-2.5 rounded-xl tracking-wide flex items-center space-x-2">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+        <span>В бота</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section (Centered Video & Text) -->
+  <section class="pt-28 pb-20 px-4 text-center">
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+      
+      <!-- Video Center Container -->
+      <div class="w-full max-w-lg mb-8 relative">
+        <div class="absolute -inset-4 bg-cyan-500/25 rounded-3xl blur-2xl opacity-60"></div>
+        <div class="relative glass-panel rounded-3xl p-2 neon-border overflow-hidden shadow-2xl">
+          <video class="w-full h-auto rounded-2xl object-cover" autoplay loop muted playsinline>
+            <source src="assets/hero_video.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
+      </div>
+
+      <!-- Badge -->
+      <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 text-xs font-semibold mb-6">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        <span>Протокол XRAY VLESS + REALITY</span>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6 max-w-3xl">
+        Интернет под цензурой.<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Ты — в тени.</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-base sm:text-lg text-stealth-textMuted mb-8 leading-relaxed max-w-2xl">
+        Приватный VPN нового поколения без ограничений, замедлений и цифрового следа. Пробивает любые блокировки ТСПУ и открывает свободный интернет.
+      </p>
+
+      <!-- CTA Button -->
+      <div class="w-full max-w-md flex flex-col items-center gap-4">
+        <a href="https://t.me/Ten1vpn_bot?start=site" target="_blank" class="w-full sm:w-auto neon-btn text-black font-extrabold text-base px-10 py-4 rounded-2xl tracking-wide flex items-center justify-center space-x-3">
+          <span>Активировать 5 дней бесплатно</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <div class="flex items-center justify-center space-x-6 text-xs text-stealth-textMuted font-medium pt-2">
+          <span class="flex items-center space-x-1.5">
+            <svg class="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>Без привязки карты</span>
+          </span>
+          <span class="flex items-center space-x-1.5">
+            <svg class="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>Мгновенный запуск</span>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20 px-4 border-t border-stealth-cardBorder/40">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-stealth-accent mb-3">Технологии будущего</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Почему выбирают ТЕНЬ VPN</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass-panel p-6 rounded-2xl border border-stealth-cardBorder hover:border-cyan-500/40 transition">
+          <div class="w-12 h-12 rounded-xl bg-cyan-950/50 flex items-center justify-center text-cyan-400 mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2">VLESS + REALITY</h4>
+          <p class="text-sm text-stealth-textMuted leading-relaxed">Невидимый протокол маскирует ваш трафик под обычное посещение сайтов. Бессильны любые блокировки.</p>
+        </div>
+        <div class="glass-panel p-6 rounded-2xl border border-stealth-cardBorder hover:border-cyan-500/40 transition">
+          <div class="w-12 h-12 rounded-xl bg-cyan-950/50 flex items-center justify-center text-cyan-400 mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2">До 10 Гбит/с</h4>
+          <p class="text-sm text-stealth-textMuted leading-relaxed">YouTube в 4K без буферизации, моментальная загрузка файлов и минимальный пинг для онлайн-игр.</p>
+        </div>
+        <div class="glass-panel p-6 rounded-2xl border border-stealth-cardBorder hover:border-cyan-500/40 transition">
+          <div class="w-12 h-12 rounded-xl bg-cyan-950/50 flex items-center justify-center text-cyan-400 mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2">10+ Локаций</h4>
+          <p class="text-sm text-stealth-textMuted leading-relaxed">Серверы по всему миру (Европа, США, Азия). Мгновенное переключение на лету в один клик.</p>
+        </div>
+        <div class="glass-panel p-6 rounded-2xl border border-stealth-cardBorder hover:border-cyan-500/40 transition">
+          <div class="w-12 h-12 rounded-xl bg-cyan-950/50 flex items-center justify-center text-cyan-400 mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2">Строгий No-Logs</h4>
+          <p class="text-sm text-stealth-textMuted leading-relaxed">Мы не храним историю активности, IP-адреса и логи сессий. Полная приватность ваших действий.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Connect -->
+  <section id="how" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-stealth-accent mb-3">Простота настройки</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Всего 3 шага для входа в тень</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-panel p-6 rounded-2xl text-center relative border border-stealth-cardBorder">
+          <div class="w-10 h-10 rounded-full bg-cyan-500/20 text-cyan-400 font-bold flex items-center justify-center mx-auto mb-4 border border-cyan-500/40">1</div>
+          <h4 class="text-lg font-bold text-white mb-2">Перейди в бота</h4>
+          <p class="text-sm text-stealth-textMuted">Запусти <a href="https://t.me/Ten1vpn_bot?start=site" class="text-cyan-400 underline">@Ten1vpn_bot</a> в Telegram и нажми Старт.</p>
+        </div>
+        <div class="glass-panel p-6 rounded-2xl text-center relative border border-stealth-cardBorder">
+          <div class="w-10 h-10 rounded-full bg-cyan-500/20 text-cyan-400 font-bold flex items-center justify-center mx-auto mb-4 border border-cyan-500/40">2</div>
+          <h4 class="text-lg font-bold text-white mb-2">Забери ключ</h4>
+          <p class="text-sm text-stealth-textMuted">Бот мгновенно выдаст персональный VLESS-ключ и инструкцию под твою ОС.</p>
+        </div>
+        <div class="glass-panel p-6 rounded-2xl text-center relative border border-stealth-cardBorder">
+          <div class="w-10 h-10 rounded-full bg-cyan-500/20 text-cyan-400 font-bold flex items-center justify-center mx-auto mb-4 border border-cyan-500/40">3</div>
+          <h4 class="text-lg font-bold text-white mb-2">Подключись</h4>
+          <p class="text-sm text-stealth-textMuted">Вставь ключ в приложение (Happ / Streisand / v2rayN) и наслаждайся скоростью.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 px-4 border-t border-stealth-cardBorder/40">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-stealth-accent mb-3">Честные условия</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Единый тариф для использования<br class="hidden sm:inline"> собственной цифровой тени</h3>
+        <p class="text-sm text-stealth-textMuted max-w-lg mx-auto">
+          Все серверы 10 Гбит/с, строгий No-Logs и поддержка 24/7 включены во все тарифы.
+        </p>
+      </div>
+
+      <!-- Tariffs Grid (4 cards) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        
+        <!-- 1 Month -->
+        <div class="glass-panel p-6 rounded-3xl border border-stealth-cardBorder flex flex-col justify-between text-center hover:border-cyan-500/40 transition">
+          <div>
+            <h4 class="text-xl font-bold text-white mb-2 pt-2">1 Месяц</h4>
+            <div class="text-3xl font-black text-white mb-2">199 ₽</div>
+            <div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-cyan-950/40 border border-cyan-500/20 text-cyan-400 text-xs font-medium mb-4">
+              <span>📱 3 устройства</span>
+            </div>
+            <p class="text-xs text-stealth-textMuted mb-6">Тест скорости и стабильности на своих гаджетах.</p>
+          </div>
+          <a href="https://t.me/Ten1vpn_bot?start=site" class="w-full py-3 rounded-xl border border-cyan-500/40 text-cyan-400 font-bold text-sm hover:bg-cyan-500/10 transition">Выбрать</a>
+        </div>
+
+        <!-- 3 Months (Hit) -->
+        <div class="glass-panel p-6 rounded-3xl neon-border relative flex flex-col justify-between text-center scale-105 shadow-2xl bg-stealth-card/90">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-400 text-black text-[10px] uppercase font-black px-3.5 py-1 rounded-full tracking-wider shadow-lg">Хит продаж</div>
+          <div>
+            <h4 class="text-xl font-bold text-white mb-2 pt-2">3 Месяца</h4>
+            <div class="text-3xl font-black text-cyan-400 mb-1">499 ₽</div>
+            <div class="text-xs text-stealth-textMuted mb-2">~166 ₽ / месяц</div>
+            <div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-medium mb-4">
+              <span>📱 3 устройства</span>
+            </div>
+            <p class="text-xs text-stealth-textMuted mb-6">Идеальный баланс выгоды и комфорта.</p>
+          </div>
+          <a href="https://t.me/Ten1vpn_bot?start=site" class="w-full py-3.5 rounded-xl neon-btn text-black font-extrabold text-sm transition">Активировать</a>
+        </div>
+
+        <!-- 6 Months -->
+        <div class="glass-panel p-6 rounded-3xl border border-stealth-cardBorder flex flex-col justify-between text-center hover:border-cyan-500/40 transition">
+          <div>
+            <h4 class="text-xl font-bold text-white mb-2 pt-2">6 Месяцев</h4>
+            <div class="text-3xl font-black text-white mb-1">899 ₽</div>
+            <div class="text-xs text-stealth-textMuted mb-2">~149 ₽ / месяц</div>
+            <div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-cyan-950/40 border border-cyan-500/20 text-cyan-400 text-xs font-medium mb-4">
+              <span>📱 3 устройства</span>
+            </div>
+            <p class="text-xs text-stealth-textMuted mb-6">Полгода спокойного сёрфинга без переплат.</p>
+          </div>
+          <a href="https://t.me/Ten1vpn_bot?start=site" class="w-full py-3 rounded-xl border border-cyan-500/40 text-cyan-400 font-bold text-sm hover:bg-cyan-500/10 transition">Выбрать</a>
+        </div>
+
+        <!-- 12 Months -->
+        <div class="glass-panel p-6 rounded-3xl border border-stealth-cardBorder flex flex-col justify-between text-center hover:border-cyan-500/40 transition">
+          <div>
+            <h4 class="text-xl font-bold text-white mb-2 pt-2">1 Год</h4>
+            <div class="text-3xl font-black text-white mb-1">1 490 ₽</div>
+            <div class="text-xs text-stealth-textMuted mb-2">~124 ₽ / месяц</div>
+            <div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-cyan-950/40 border border-cyan-500/20 text-cyan-400 text-xs font-medium mb-4">
+              <span>📱 3 устройства</span>
+            </div>
+            <p class="text-xs text-stealth-textMuted mb-6">Максимальная экономия на 365 дней.</p>
+          </div>
+          <a href="https://t.me/Ten1vpn_bot?start=site" class="w-full py-3 rounded-xl border border-cyan-500/40 text-cyan-400 font-bold text-sm hover:bg-cyan-500/10 transition">Выбрать</a>
+        </div>
+
+      </div>
+
+      <!-- Add-on Devices Upsell Banner -->
+      <div class="mt-10 p-5 rounded-2xl glass-panel border border-cyan-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-3xl mx-auto text-center sm:text-left">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-950/60 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-xl flex-shrink-0">
+            ➕
+          </div>
+          <div>
+            <h5 class="text-white font-bold text-sm sm:text-base">Нужно больше гаджетов?</h5>
+            <p class="text-xs sm:text-sm text-stealth-textMuted">Добавляй до 10 устройств к любому тарифу всего за <span class="text-cyan-400 font-semibold">+50 ₽ / слот в месяц</span>.</p>
+          </div>
+        </div>
+        <a href="https://t.me/Ten1vpn_bot?start=site" target="_blank" class="px-5 py-2.5 rounded-xl border border-cyan-500/40 text-cyan-400 font-bold text-xs hover:bg-cyan-500/15 transition flex-shrink-0">
+          В бота
+        </a>
+      </div>
+
+      <div class="mt-8 text-center text-xs text-stealth-textMuted">
+        <span>Способы оплаты: </span>
+        <span class="text-white font-medium">СБП • Карты РФ • Криптовалюта • Telegram Stars</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto glass-panel neon-border rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
+      <div class="relative z-10">
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Стань своей тенью в сети</h3>
+        <p class="text-sm sm:text-base text-stealth-textMuted mb-8 max-w-xl mx-auto">
+          Активируй 5 дней бесплатного доступа прямо сейчас в Telegram и ощути разницу без ограничений.
+        </p>
+        <a href="https://t.me/Ten1vpn_bot?start=site" target="_blank" class="inline-flex neon-btn text-black font-extrabold text-sm sm:text-base px-8 py-4 rounded-2xl tracking-wide items-center space-x-2">
+          <span>Запустить бота @Ten1vpn_bot</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-4 border-t border-stealth-cardBorder/40 text-center text-xs text-stealth-textMuted">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-white">ТЕНЬ VPN</span>
+        <span>© 2026. Все права защищены.</span>
+      </div>
+      <div class="flex space-x-6">
+        <a href="https://t.me/Ten1vpn_bot?start=site" class="hover:text-cyan-400 transition">Бот сервиса</a>
+        <a href="https://t.me/Ten1vpn_bot?start=site" class="hover:text-cyan-400 transition">Поддержка</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
